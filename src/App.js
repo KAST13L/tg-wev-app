@@ -1,3 +1,6 @@
+import { useTelegram } from "./hooks/useTelegram";
+
 export const App = () => {
-  return <div className="App">Yo!</div>;
+  const { user } = useTelegram();
+  return <div className="App">Yo!{user?.username}</div>;
 };
